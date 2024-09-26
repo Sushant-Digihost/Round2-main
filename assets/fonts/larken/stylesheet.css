@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-Light.woff2') format('woff2'),
+        url('LarkenDEMO-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-Italic.woff2') format('woff2'),
+        url('LarkenDEMO-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-BlackItalic.woff2') format('woff2'),
+        url('LarkenDEMO-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-ExtraBold.woff2') format('woff2'),
+        url('LarkenDEMO-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-ExtraBoldItalic.woff2') format('woff2'),
+        url('LarkenDEMO-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-BoldItalic.woff2') format('woff2'),
+        url('LarkenDEMO-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-Bold.woff2') format('woff2'),
+        url('LarkenDEMO-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-MediumItalic.woff2') format('woff2'),
+        url('LarkenDEMO-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-Thin.woff2') format('woff2'),
+        url('LarkenDEMO-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-LightItalic.woff2') format('woff2'),
+        url('LarkenDEMO-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-ThinItalic.woff2') format('woff2'),
+        url('LarkenDEMO-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-Black.woff2') format('woff2'),
+        url('LarkenDEMO-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-Medium.woff2') format('woff2'),
+        url('LarkenDEMO-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('LarkenDEMO-Regular.woff2') format('woff2'),
+        url('LarkenDEMO-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,93 @@
+@import url(../../fonts/larken/stylesheet.css);
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mr+Dafoe&display=swap');
+
+// @use "sass:map";
+:root{
+    --larken-font: 'Larken DEMO';
+    --barlow-font: "Barlow Condensed", sans-serif;
+    --dafoe-font: "Mr Dafoe", cursive;
+    --base-font : 1rem;
+
+    --primary: #C33130;
+    --primary_hover: #AF2C2B;
+    --secondary: #00833E;
+    --secondary_hover: #007537;
+    --text: #464646;
+    --text_light: #B7B7B7;
+    --dark: #212121;
+    --light: #DDDBD4;
+    --white : #ffffff;
+    --border: #EAEAEA;
+    --background: #F4F1EA;
+    --yellow: #fbad39;
+}
+
+// Font
+$larken-font : var(--larken-font);
+$barlow-font : var(--barlow-font);
+$dafoe-font : var(--dafoe-font);
+$base-font : var(--base-font);
+
+// Colors
+$primary : var(--primary);
+$primary_hover : var(--primary_hover);
+$secondary : var(--secondary);
+$secondary_hover : var(--secondary_hover);
+$text : var(--text);
+$text_light : var(--text_light);
+$dark : var(--dark);
+$light : var(--light);
+$white : var(--white);
+$border : var(--border);
+$background : var(--background);
+$yellow : var(--yellow);
+
+
+// Border Radius 
+$radius_primary: 10px;
+$radius_md : $radius_primary * .5;
+
+$base_padding: 10px;
+$base_margin : 10px;
+
+
+
+// Transitions 
+
+$transition_fast : 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+$transition_slow : all cubic-bezier(0.165, 0.84, 0.44, 1) .6s;
+
+// Created color classes using Map
+
+$colors: (
+    "primary": $primary,
+    "primary-hover": $primary_hover,
+    "secondary": $secondary,
+    "secondary-hover": $secondary_hover,
+    "text": $text,
+    "text_light": $text_light,
+    "dark" : $dark,
+    "light": $light,
+    "border": $border,
+    "yellow": $yellow,
+);
+
+// Colors
+@each $key , $val in $colors{
+    .color-#{$key}{
+        color: $val !important;
+    }
+}
+
+$bg-colors : (
+    "primary":$primary,
+    "secondary":$secondary,
+    "light": $light,
+    "background": $background,
+);
+
+@each $key , $val in $bg-colors{
+    .bg-#{$key}{
+        background-color: $val ;
+    }
+}

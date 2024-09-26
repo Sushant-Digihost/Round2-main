@@ -1,0 +1,456 @@
+// Variables
+@import 'utilities/variables';
+
+// Base
+@import 'utilities/base';
+
+main {
+
+    .hero {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        background-color: $light;
+
+        // &::before{
+        //     content: '';
+        //     position: absolute;
+        //     width: 50%;
+        //     height: 100vh;
+        //     background-color: transparent;
+        //     z-index: 7;
+
+        // }
+
+        .iframe-wrapper {
+            pointer-events: none;
+            position: relative;
+
+
+            iframe {
+                height: 100vh;
+                width: 100vw;
+                position: absolute;
+                z-index: 6;
+                pointer-events: all;
+                overflow: hidden;
+
+            }
+        }
+
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30vw;
+            z-index: 5;
+            font-weight: 900;
+            font-family: $dafoe-font;
+            color: black;
+            opacity: 0.1;
+            filter: drop-shadow(10px);
+        }
+
+        .patch {
+            position: absolute;
+            width: 15%;
+            height: 10%;
+            background-color: $light;
+            bottom: 0;
+            right: 0;
+            z-index: 8;
+        }
+    }
+
+    .diamond_section {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+
+        .diamond-links {
+
+            .diamond-links__item {
+                cursor: pointer;
+                transition: $transition_slow;
+
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: scale(1.15, 1.1);
+                }
+
+                .diamond-links__item-img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    border-radius: var(--border-radius-3, 30px);
+                    overflow: hidden;
+                    pointer-events: none;
+                    transition: $transition_slow;
+
+
+                    @media (min-width:1200px) {
+                        transform: rotate(45deg) scale(1.20);
+                    }
+
+                    img {
+                        transform: rotate(-45deg) scale(1.37);
+
+                    }
+
+                }
+
+                .diamond-links__item-content {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    padding: 20px;
+                    z-index: 1;
+                    gap: 10rem;
+                    text-align: center;
+
+                    h3 {
+                        margin-bottom: auto;
+                        font-size: 2rem;
+                        color: $yellow;
+                        font-family: $dafoe-font;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: .2em;
+                        line-height: 120%;
+                    }
+
+                    p {
+                        font-size: $base-font;
+                        color: $light;
+                        font-family: $barlow-font ;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        opacity: 0;
+                        transition: opacity cubic-bezier(0.165, 0.84, 0.44, 1) .5s .25s;
+                    }
+                }
+
+
+                &:hover {
+                    .diamond-links__item-img {
+                        transform: rotate(0deg) scale(1.15);
+
+                        img {
+                            transform: rotate(0deg) scale(1.25);
+                        }
+                    }
+
+                    .diamond-links__item-content {
+                        p {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &.active {
+                    .diamond-links__item-img {
+                        transform: rotate(0deg) scale(1.15);
+
+                        img {
+                            transform: rotate(0deg) scale(1.25);
+                        }
+                    }
+
+                    .diamond-links__item-content {
+                        p {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .product_section {
+
+
+        padding: 0;
+
+        .product-wrapper {
+
+            background-color: #f4f1ea;
+            display: flex;
+            border-bottom: 2.2px solid var(--border);
+            // flex-direction: column;
+            text-align: center;
+            transition: all ease .35s;
+            background: #fff;
+            overflow: hidden;
+
+
+            .product-category {
+                position: relative;
+                transition: all ease .35s;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 0 0 1px var(--border);
+
+                .product-icon-top {
+                    position: absolute;
+                    top: calc(100% + -70px);
+                    left: 50%;
+                    transform: translate(-50%, -100%);
+                    width: 100%;
+                    transition: all ease .35s;
+
+                    svg {
+                        width: 180px;
+                    }
+                }
+
+                .product-img {
+                    position: relative;
+                    transition: all ease .35s;
+                    overflow: hidden;
+
+                    a {
+                        position: relative;
+                        z-index: 2;
+
+                        img {
+                            height: auto;
+                            max-width: 100%;
+                            border: none;
+                            border-radius: 0;
+                            box-shadow: none;
+                        }
+                    }
+                }
+
+                h6 {
+                    font-size: 50px;
+                    text-transform: uppercase;
+                    line-height: 1.0714285714;
+                    font-weight: 700;
+                    color: $border;
+                    opacity: .3;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: left;
+                    transform: rotate(-30deg);
+                    z-index: 1;
+                    pointer-events: none;
+                    font-family: $barlow-font;
+                }
+
+                .decor-leaf {
+                    overflow: hidden;
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    transform: translate(-40px, 40px);
+                    transition: all ease .35s;
+                    transition-delay: .3s;
+                    opacity: 0;
+                }
+
+                .decor-leaf-2 {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    transform: translate(40px, -40px);
+                    transition: all ease .35s;
+                    transition-delay: .3s;
+                    opacity: 0;
+                }
+
+                .product-icon {
+                    opacity: 0;
+                    min-height: 130px;
+
+                    svg {
+                        max-width: 100%;
+                        overflow: hidden;
+                    }
+                }
+
+                .product-content {
+                    transition: all ease .35s;
+                    opacity: 0;
+                    transform: translateY(20px);
+
+                    h4 {
+                        a {
+
+                            font-size: 3vw;
+                            line-height: 1.25em;
+                            font-family: $dafoe-font;
+                            color: #fff;
+                            font-weight: 400;
+                        }
+                    }
+
+                    .cat-total {
+                        font-size: 18px;
+                        line-height: 1.3888888889;
+                        font-weight: 500;
+                        color: #fff;
+                        font-family: $barlow-font;
+                    }
+                }
+
+                &:hover {
+
+                    background-color: $yellow;
+
+                    .product-icon-top {
+                        top: 0;
+                        transform: translate(-50%, 0);
+
+                        svg {
+                            path {
+                                fill: $white !important;
+                            }
+                        }
+                    }
+
+                    .decor-leaf,
+                    .decor-leaf-2 {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+
+                    .product-icon {
+                        order: -1;
+
+                        svg {
+                            fill: #fff !important;
+                        }
+                    }
+
+                    .product-content {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+    .about {
+        height: 100vh;
+        width: 100%;
+        padding: 60px 0px;
+        position: relative;
+
+        .sand{
+            position: absolute;
+            top: 30%;
+            left: 10%;
+        }
+
+        .cab{
+            position: absolute;
+            top: 30%;
+            right: 6%;
+        }
+
+        .img_content {
+
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            h1 {
+                font-size: 80px;
+                font-family: $barlow-font;
+                text-transform: uppercase;
+                transform: rotateZ(-28deg);
+                color:#2121210d;
+                filter: blur(3px);
+                font-weight: 900;
+                line-height: 1;
+                text-align: center;
+                letter-spacing: 1px;
+        
+
+            }
+
+            img{
+                position: absolute;
+                z-index: 1;
+                top: 0;
+            }
+
+          
+        }
+
+        .text_content{
+
+            span{
+                font-size: 20px;
+                font-family: $barlow-font;
+                font-weight: 600;
+                color: $primary;
+                padding-bottom: 10px;
+            }
+
+            h1{
+                font-size: 4vw;
+                font-family: $barlow-font;
+                font-weight: 700;
+                color: $dark;
+                padding-bottom: 10px;
+
+            }
+
+            p{
+                font-size: 18px;
+                font-family: $barlow-font;
+                color: grey;
+                padding-bottom: 10px;
+
+
+            }
+
+            .img_continer{
+
+                display: flex;
+                gap: 20px;
+
+                .img_box{
+
+                    img{
+                        width: 80px;
+                        height: 80px;
+                        padding-bottom: 10px;
+                    }
+
+                    h2{
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: $dark;
+                        font-family: $barlow-font;
+                    }
+                }
+            }
+    
+        }
+    }
+
+}

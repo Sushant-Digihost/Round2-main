@@ -1,0 +1,184 @@
+html{
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.65;
+	font-style: normal;
+	color: $dark;
+	font-family: $larken-font;
+	text-rendering: optimizelegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	counter-reset: my-sec-counter
+}
+
+.page_wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+iframe {
+	border: none;
+}
+
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+textarea,
+textarea:hover,
+textarea:focus,
+textarea:active {
+	outline: none;
+}
+
+embed,
+object,
+video {
+	height: auto;
+	max-width: 100%;
+}
+img {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	user-select: none;
+	vertical-align: middle;
+	transition: $transition_slow;
+}
+.image_wrap {
+	overflow: hidden;
+	border-radius: $radius_primary;
+	img {
+		border-radius: $radius_primary;
+	}
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	outline: 0;
+	display: inline-block;
+	text-decoration: none;
+	transition: $transition_fast;
+	&:active,
+	&:focus,
+	&:hover,
+	&:visited {
+		outline: 0;
+		text-decoration: none;
+	}
+}
+
+.fix {
+	overflow: hidden;
+}
+
+button {
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	display: inline-block;
+	transition: $transition_fast;
+	&:focus {
+		outline: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 600;
+	color: $primary;
+	font-family: $larken-font;
+	line-height: 1.2;
+}
+
+
+
+p{
+	color: $dark;
+	font-family: $larken-font;
+	font-size: $base_font;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px; 
+}
+hr {
+	opacity: 0.1;
+	margin: 30px 0;
+	background-color: $dark;
+}
+
+textarea{
+	resize: none;
+}
+
+label.form-label{
+	color: $dark;
+	font-family: $larken-font;
+	font-size: $base-font;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	text-transform: capitalize;
+	margin-bottom: 10px;
+}
+
+.fa {
+	font-family: 'Font Awesome 5 Brands';
+}
+.decoration_wrap {
+    z-index: 1;
+    position: relative;
+	.deco_item {
+		z-index: -1;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		gap: 30px 30px;
+	}
+}
+
+.section{
+	position: relative;
+	padding: 60px 0;
+}
+// Section Heading
+
+.section_heading{
+	position: relative;
+	z-index: 1;
+	margin-bottom: 20px;
+	.heading_subtitle{
+		margin-bottom: 0;
+		span{
+			color: $dark;
+			font-family: $larken-font;
+			font-size: $base_font;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 26px; 
+			text-transform: capitalize;
+		}
+	}
+	.heading_title{
+		color: $primary;
+		font-family: $larken-font;
+		font-size: 42px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 50px; 
+	}
+}
+
+
